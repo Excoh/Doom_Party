@@ -9,7 +9,7 @@ using System.Collections;
 /// Angel Diaz
 /// </summary>
 
-public class Enemy : MonoBehaviour {
+public class EnemySpawner : MonoBehaviour {
 
     public GameObject enemy;
     public float spawnTime = 3f;

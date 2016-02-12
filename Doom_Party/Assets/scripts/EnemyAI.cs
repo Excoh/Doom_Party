@@ -7,7 +7,7 @@ using System.Collections;
 /// Angel Diaz
 /// </summary>
 
-public class enemyAi : MonoBehaviour {
+public class EnemyAI : MonoBehaviour {
 
 	private Transform myTransform;
 	int speed = 1;
