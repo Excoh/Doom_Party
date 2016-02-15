@@ -27,9 +27,6 @@ public class EnemySpawner : MonoBehaviour {
 	/// Update function, called every frame.
 	/// </summary>
 	void Update () {
-		if (health == 0) {
-			Destroy (gameObject);
-		}
 	}
 
 	/// <summary>
@@ -46,8 +43,8 @@ public class EnemySpawner : MonoBehaviour {
 	/// <param name="damage">Damage.</param>
 	public void TakeDamage (int damage) {
 		health = health - damage;
-		if (health < 0) {
-			health = 0;
+		if (health <= 0) {
+			Destroy (gameObject);
 		}
 	}
 }
