@@ -20,7 +20,6 @@ public class DoorScript : MonoBehaviour {
 
         if (enemyExists)
         {
-            Debug.Log("Spawners still exist");
         }
         else 
         {
