@@ -21,12 +21,22 @@ public class EnemyAI : MonoBehaviour
 	public PlayerMovement[] players { get { return s_Players; } }
 	private float[] m_ThreatValues = null;
 	private bool[] m_IsInRange = null;
+	
 	private Vector2 m_CurrentTarget;
 	private Vector2 m_StartingPosition;
-	
 	private float m_Direction; // Measured in radians.
+	private CharacterController m_CachedCharacterController;
 	
 	public Vector2 velocity { get { return new Vector2(m_Speed * Mathf.Cos(m_Direction), m_Speed * Mathf.Sin(m_Direction)); } }
+	public CharacterController characterController
+	{
+		get
+		{
+			if (m_CachedCharacterController == null)
+				m_CachedCharacterController = GetComponent<CharacterController>();
+			return m_CachedCharacterController;
+		}
+	}
 	
 	public void OnEnable()
 	{
@@ -82,6 +92,7 @@ public class EnemyAI : MonoBehaviour
 				maxThreat = m_ThreatValues[i];
 			}
 		}
+		
 		if (m_AIMode == AIMode.IDLE)
 			Wander();
 	}
@@ -92,8 +103,9 @@ public class EnemyAI : MonoBehaviour
 		Vector2 vectorToTarget = m_CurrentTarget - (Vector2)transform.position;
 		float angleToTarget = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x);
 		float deltaAngleToTarget = angleToTarget - m_Direction;
-		if (deltaAngleToTarget < 0.0f){ deltaAngleToTarget += 2.0f * Mathf.PI;}
-		///
+		while (deltaAngleToTarget < 0.0f)
+			deltaAngleToTarget += 2.0f * Mathf.PI;
+		
 		// If delta < pi, turn clockwise. If delta > pi, turn counterclockwise.
 		if (deltaAngleToTarget > m_AimingLeewayRadians && deltaAngleToTarget < Mathf.PI)
 			m_Direction += m_Speed / m_TurningRadius * Time.deltaTime;
@@ -102,9 +114,8 @@ public class EnemyAI : MonoBehaviour
 		
 		float distanceToTarget = Vector2.Distance(m_CurrentTarget, transform.position);
 		if (distanceToTarget > m_TargetReachingLeeway)
-		{
+			//characterController.Move(velocity * Time.deltaTime);
 			transform.position = (Vector2)transform.position + velocity * Time.deltaTime;
-		}
 	}
 	
 	private void Wander()
