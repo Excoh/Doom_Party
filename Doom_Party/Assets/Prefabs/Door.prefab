@@ -1,54 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &151214
+--- !u!1 &105460
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 416962}
-  - 114: {fileID: 11485992}
-  - 212: {fileID: 21280972}
+  - 4: {fileID: 475588}
+  - 212: {fileID: 21269988}
+  - 114: {fileID: 11478174}
+  - 61: {fileID: 6135770}
   m_Layer: 0
-  m_Name: Enemy Spawaner
-  m_TagString: Enemy
+  m_Name: Door
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &416962
+  m_IsActive: 0
+--- !u!4 &475588
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151214}
+  m_GameObject: {fileID: 105460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.513888, y: -3.1388886, z: 0}
+  m_LocalPosition: {x: 3.6020799, y: 0.8204489, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11485992
+--- !u!61 &6135770
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.6666667, y: 0.68333334}
+--- !u!114 &11478174
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151214}
+  m_GameObject: {fileID: 105460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327978a14e9f4f448bf8678a74607534, type: 3}
+  m_Script: {fileID: 11500000, guid: 52bbef1d76200014191d83a63f606610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 194792, guid: dd95db4707ff5e548b70d0310efa21be, type: 2}
-  spawnTime: 3
-  health: 100
---- !u!212 &21280972
+  enemySpawnerArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyExists: 0
+  length: 2
+--- !u!212 &21269988
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151214}
+  m_GameObject: {fileID: 105460}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -68,9 +85,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2b17fa1d9f8084612bae936ba6b66c29, type: 3}
-  m_Color: {r: 0.9264706, g: 0.06812285, b: 0.06812285, a: 1}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b13c2a82a6d9cef4394eef13a0e24406, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
@@ -79,16 +96,8 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 151214}
+  m_RootGameObject: {fileID: 105460}
   m_IsPrefabParent: 1
