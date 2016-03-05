@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnerArray:
-  - {fileID: 1402561455}
+  - {fileID: 0}
   - {fileID: 0}
   enemyExists: 0
   length: 2
@@ -460,7 +460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
 --- !u!4 &407784787 stripped
 Transform:
   m_PrefabParentObject: {fileID: 446896, guid: 39721feeab0059544b620be50290d4af, type: 2}
@@ -659,7 +659,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416962, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
       propertyPath: m_Name
@@ -807,7 +807,7 @@ Transform:
   - {fileID: 929673552}
   - {fileID: 407784787}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
 --- !u!1001 &1256304446
 Prefab:
   m_ObjectHideFlags: 0
@@ -938,7 +938,7 @@ Prefab:
     - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: enemySpawnerArray.Array.data[0]
       value: 
-      objectReference: {fileID: 1402561455}
+      objectReference: {fileID: 0}
     - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: enemySpawnerArray.Array.data[1]
       value: 
@@ -946,56 +946,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1402561455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1402561457}
-  - 114: {fileID: 1402561456}
-  - 222: {fileID: 1402561458}
-  m_Layer: 0
-  m_Name: Enemy Spawaner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1402561456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11485992, guid: 2ee694f060ef54445865abc90a02ca1a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402561455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327978a14e9f4f448bf8678a74607534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 194792, guid: dd95db4707ff5e548b70d0310efa21be, type: 2}
-  spawnTime: 2
-  health: 100
---- !u!4 &1402561457
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402561455}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0529823, y: -3.0556564, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
---- !u!222 &1402561458
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402561455}
 --- !u!1001 &1524488646
 Prefab:
   m_ObjectHideFlags: 0
@@ -1079,7 +1029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416962, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
       propertyPath: m_Name
