@@ -13,7 +13,6 @@ public class EnemySpawner : MonoBehaviour {
 
     public GameObject enemy;
     public float spawnTime = 3f;
-    public Transform spawnPoint;
 	public int health = 100;
     
 	/// <summary>
@@ -34,7 +33,7 @@ public class EnemySpawner : MonoBehaviour {
 	/// </summary>
     void Spawn ()
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, transform.position, transform.rotation);
     }
 
 	/// <summary>
