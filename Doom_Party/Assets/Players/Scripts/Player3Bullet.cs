@@ -10,6 +10,7 @@ public class Player3Bullet : MonoBehaviour {
 	private float speedY;
 	private float speed;
 	private int deleteTime;
+	private float angle;
 
 	void Start() {
 		speedX = 0;
@@ -17,18 +18,29 @@ public class Player3Bullet : MonoBehaviour {
 		speed = 0.5f; //bullet speed
 		deleteTime = 0;
 
-		speedX = Mathf.Sin(MyGlobalAngleController2.SharedInstance.JoyAngle);
-		speedY = Mathf.Cos(MyGlobalAngleController2.SharedInstance.JoyAngle);
-		transform.localEulerAngles = new Vector3 (0,0,MyGlobalAngleController3.SharedInstance.JoyAngle/Mathf.PI*-180);
+		if (MyGlobalController3.SharedInstance.Mode == 0) {
+			angle = MyGlobalController3.SharedInstance.JoyAngle + Random.Range (-0.06f, 0.06f);
+		} else {
+			if (MyGlobalController3.SharedInstance.Mode == 2) { //Sprint
+				angle = MyGlobalController3.SharedInstance.JoyAngle + Random.Range (-0.2f, 0.2f);
+			} else { // Crouch
+				angle = MyGlobalController3.SharedInstance.JoyAngle;
+			}
+		}
+
+		//starting distance from the player offset by slight angle
+		speedX = Mathf.Sin(angle+0.13f);
+		speedY = Mathf.Cos(angle+0.13f);
+		transform.position = new Vector3 (transform.position.x + speedX*0.65f-5000.5f, transform.position.y + speedY*0.65f, 0);
+
+		//Set velocity based on angle
+		speedX = Mathf.Sin(angle);
+		speedY = Mathf.Cos(angle);
+		transform.localEulerAngles = new Vector3 (0,0,angle/Mathf.PI*-180);
 
 		transform.localScale = new Vector3 (1, 3, 1);
 
-		//starting distance/radius from the player
-		transform.position = new Vector3 (transform.position.x + speedX*0.8f-5000.5f, transform.position.y + speedY*0.8f, 0);
-
 		// Adjust the speed of the bullets
-		speedX = speedX + Random.Range(-0.05f, 0.05f);
-		speedY = speedY + Random.Range(-0.05f, 0.05f);
 		speedX = speedX * speed;
 		speedY = speedY * speed;
 
