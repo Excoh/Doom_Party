@@ -1,20 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DeleteGunSound : MonoBehaviour {
+public class Lifespan : MonoBehaviour {
 
-	private int deleteTime;
+	[SerializeField] private Timer m_Timer;
 
 	// Use this for initialization
 	void Start () {
-		deleteTime = 0;
+		m_Timer.Reset();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		deleteTime++;
-		if (deleteTime > 100){
+		if (m_Timer.complete){
 			Destroy (gameObject);
 		}
 	
