@@ -100,9 +100,9 @@ public class Player3Controls : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		//Physics2D.IgnoreLayerCollision(8, 9);
-		/*
-		if (col.gameObject.tag == "Bullet") {
-			P3Health = P3Health - 1;
+		
+		if (col.gameObject.tag == "Enemy") {
+			P3Health = P3Health - 5;
 			MyGlobalController3.SharedInstance.P3Health = P3Health;
 			//print (P3Health); // display the players numeric health amount
 			if (P3Health <= 0) {
@@ -110,7 +110,7 @@ public class Player3Controls : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
-		*/
+		
 	}
 
 

@@ -172,6 +172,18 @@ public class Player1Controls : MonoBehaviour {
 
 		}
 	*/
+        if (col.gameObject.tag == "Enemy")
+        {
+            P1Health = P1Health - 5;
+            MyGlobalController.SharedInstance.P1Health = P1Health;
+            print (P1Health); // display the players numeric health amount
+            if (P1Health <= 0)
+            {
+                //Instantiate (PlayerDeath, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
+                Destroy(gameObject);
+            }
+
+        }
 	}
 
 
