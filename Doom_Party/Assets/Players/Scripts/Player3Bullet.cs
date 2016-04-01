@@ -71,7 +71,6 @@ public class Player3Bullet : MonoBehaviour {
 		}
 		if (col.gameObject.tag == "Enemy") {
 			Instantiate (Blood, new Vector3 (transform.position.x+speedX/2.0f, transform.position.y+speedY/2.0f,0), Quaternion.identity);
-            Destroy(col.gameObject);
 			Destroy(gameObject);
 		}
 	}

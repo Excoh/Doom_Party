@@ -99,8 +99,9 @@ public class Player4Controls : MonoBehaviour {
 	//Test Damage
 	void OnCollisionEnter2D(Collision2D col)
 	{
+		/*
 		if (col.gameObject.tag == "Bullet") {
-			P4Health = P4Health - 5;
+			P4Health = P4Health - 1;
 			MyGlobalController4.SharedInstance.P4Health = P4Health;
 			//print (P4Health); // display the players numeric health amount
 			if (P4Health <= 0) {
@@ -108,7 +109,7 @@ public class Player4Controls : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
-		
+		*/
 	}
 
 
