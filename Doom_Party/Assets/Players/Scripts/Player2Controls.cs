@@ -16,6 +16,8 @@ public class Player2Controls : MonoBehaviour {
 	private int P2Health = 100;
 	//private int P2Score = 0;
 
+    private int num;
+
 	// Use this for initialization
 	void Start () {
 		ReadyFire = false;
@@ -26,6 +28,66 @@ public class Player2Controls : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        ////////// CODE FOR THE KEYBOARD INPUT //////////
+        // Get The Players Input
+        JoyX = Input.GetAxis("Horizontal J1");
+        JoyY = Input.GetAxis("Vertical J1");
+        Jangle = Mathf.Atan2(JoyX, JoyY);
+
+
+        // Player input IJKL
+        num = 0;
+        if (Input.GetKey("i")) // Up
+            num = num + 1;
+        if (Input.GetKey("k")) // Down
+            num = num + 2;
+        if (Input.GetKey("l")) // Right
+            num = num + 4;
+        if (Input.GetKey("j")) // Left
+            num = num + 8;
+
+        switch (num)
+        {
+            case 1: // up
+                JoyX = 0; JoyY = 1;
+                Jangle = 0 * Mathf.PI / 180.0f;
+                break;
+            case 2: // down
+                JoyX = 0; JoyY = -1;
+                Jangle = 180 * Mathf.PI / 180.0f;
+                break;
+            case 4: // right
+                JoyX = 1; JoyY = 0;
+                Jangle = 90 * Mathf.PI / 180.0f;
+                break;
+            case 5: // up&right
+                JoyX = 0.707106781f; JoyY = 0.707106781f;
+                Jangle = 45 * Mathf.PI / 180.0f;
+                break;
+            case 6: // down&right
+                JoyX = 0.707106781f; JoyY = -0.707106781f;
+                Jangle = 135 * Mathf.PI / 180.0f;
+                break;
+            case 8: // left
+                JoyX = -1; JoyY = 0;
+                Jangle = 270 * Mathf.PI / 180.0f;
+                break;
+            case 9: // up&left
+                JoyX = -0.707106781f; JoyY = 0.707106781f;
+                Jangle = 315 * Mathf.PI / 180.0f;
+                break;
+            case 10: // down&left
+                JoyX = -0.707106781f; JoyY = -0.707106781f;
+                Jangle = 225 * Mathf.PI / 180.0f;
+                break;
+            default:
+
+                break;
+
+        }
+
+        ////////// CODE FOR KEYBOARD INPUT //////////
 
 		// Crouch and Sprint Buttons
 		if (Input.GetKey ("joystick 2 button 0")) { //change c to right mouse click
@@ -38,10 +100,11 @@ public class Player2Controls : MonoBehaviour {
 			}
 		}
 
-		// Get The Players Input
-		JoyX = Input.GetAxis ("Horizontal J2");
-		JoyY = Input.GetAxis ("Vertical J2");
-		Jangle = Mathf.Atan2 (JoyX, JoyY);
+		// Get The Players Input for the controller
+        // Uncomment this inorder to play with exclusively the controller
+		// JoyX = Input.GetAxis ("Horizontal J2");
+		// JoyY = Input.GetAxis ("Vertical J2");
+		// Jangle = Mathf.Atan2 (JoyX, JoyY);
 
 		// Move The Player
 		if (MyGlobalController2.SharedInstance.Mode == 0) {
@@ -80,7 +143,8 @@ public class Player2Controls : MonoBehaviour {
 		if (ReadyFire == true) {
 
 			//if (Input.GetKey ("joystick 2 button 0")){
-			if (Input.GetAxis ("RTrigger J2") >= 0.5f){
+            if (Input.GetAxis("RTrigger J2") >= 0.5f | Input.GetKey("m"))
+            {
 				Instantiate (P2Bullet, new Vector3 (transform.position.x + 5000.5f, transform.position.y, 0), Quaternion.identity);
 				Instantiate (GunSound, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
 				Delay = 0;
