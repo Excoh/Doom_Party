@@ -158,20 +158,28 @@ public class Player1Controls : MonoBehaviour {
 	//Test Damage
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		//Physics2D.IgnoreLayerCollision(8, 9);
+		Physics2D.IgnoreLayerCollision(8, 9);
 
-		/*
-		if (col.gameObject.tag == "Bullet") {
-			P1Health = P1Health - 1;
+		
+		if (col.gameObject.tag == "Enemy") {
+			P1Health = P1Health - 10;
 			MyGlobalController.SharedInstance.P1Health = P1Health;
-			//print (P1Health); // display the players numeric health amount
+			print (P1Health); // display the players numeric health amount
 			if (P1Health <= 0) {
 				//Instantiate (PlayerDeath, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
 				Destroy(gameObject);
 			}
 
 		}
-	*/
+
+        if (col.gameObject.tag == "Health")
+        {
+            P1Health += 10;
+            print(P1Health);
+            MyGlobalController.SharedInstance.P1Health = P1Health;
+            if (P1Health > 100) P1Health = 100;
+        }
+	
 	}
 
 
