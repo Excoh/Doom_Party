@@ -1513,6 +1513,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 53.3899994
@@ -1552,6 +1556,26 @@ Prefab:
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.97980249
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 636713857}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 740117442}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 617359800}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
@@ -1943,6 +1967,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &149242929 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1609385187}
 --- !u!4 &153959949 stripped
 Transform:
   m_PrefabParentObject: {fileID: 446896, guid: 39721feeab0059544b620be50290d4af, type: 2}
@@ -3022,6 +3050,10 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_PrefabInternal: {fileID: 2137402955}
+--- !u!1 &254680637 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1095917384}
 --- !u!4 &254906326 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -4209,6 +4241,14 @@ Prefab:
       propertyPath: enemySpawnerArray.Array.data[0]
       value: 
       objectReference: {fileID: 1667499650}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_IsPrefabParent: 0
@@ -5193,6 +5233,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &426965865 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 615720100}
 --- !u!1001 &427719231
 Prefab:
   m_ObjectHideFlags: 0
@@ -5388,6 +5432,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 92.4423218
@@ -5428,6 +5476,42 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.93043649
       objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 149242929}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 426965865}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 1131374105}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 1288840573}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[4]
+      value: 
+      objectReference: {fileID: 907970630}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[6]
+      value: 
+      objectReference: {fileID: 1442680464}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[5]
+      value: 
+      objectReference: {fileID: 610790436}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_IsPrefabParent: 0
@@ -5709,6 +5793,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_PrefabInternal: {fileID: 1448943581}
+--- !u!1 &481024922 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 930222346}
 --- !u!4 &482005753 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -6171,6 +6259,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &511961071 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 577799727}
 --- !u!4 &512842598 stripped
 Transform:
   m_PrefabParentObject: {fileID: 446896, guid: 39721feeab0059544b620be50290d4af, type: 2}
@@ -7344,6 +7436,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 416962, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
   m_PrefabInternal: {fileID: 1024289338}
+--- !u!1 &610790436 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1888930603}
 --- !u!4 &610840891 stripped
 Transform:
   m_PrefabParentObject: {fileID: 446896, guid: 39721feeab0059544b620be50290d4af, type: 2}
@@ -7589,6 +7685,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 40
+--- !u!1 &617359800 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 812531703}
 --- !u!4 &619815869 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -7601,6 +7701,10 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 105460, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_PrefabInternal: {fileID: 1927881171}
+--- !u!1 &636713857 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 520023609}
 --- !u!4 &638787919 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -7697,6 +7801,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &645023324 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1708476769}
 --- !u!4 &646178931 stripped
 Transform:
   m_PrefabParentObject: {fileID: 446896, guid: 39721feeab0059544b620be50290d4af, type: 2}
@@ -8007,6 +8115,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 67.8499985
@@ -8047,6 +8159,26 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.87219119
       objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1299124119}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1636393685}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 1531413718}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_IsPrefabParent: 0
@@ -8415,6 +8547,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 70.25
@@ -8454,6 +8590,26 @@ Prefab:
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.97980249
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 617359800}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 636713857}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 740117442}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
@@ -8816,6 +8972,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_PrefabInternal: {fileID: 1009095456}
+--- !u!1 &735344101 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 369359640}
 --- !u!4 &736324133 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -8824,6 +8984,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 446896, guid: 39721feeab0059544b620be50290d4af, type: 2}
   m_PrefabInternal: {fileID: 427719231}
+--- !u!1 &740117442 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 2097903474}
 --- !u!1001 &740777762
 Prefab:
   m_ObjectHideFlags: 0
@@ -10053,6 +10217,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 76.8600006
@@ -10093,6 +10261,26 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.97235
       objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1299124119}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1636393685}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 1531413718}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_IsPrefabParent: 0
@@ -10507,6 +10695,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_PrefabInternal: {fileID: 1692520427}
+--- !u!1 &907970630 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1089878794}
 --- !u!1 &909497357
 GameObject:
   m_ObjectHideFlags: 0
@@ -13294,6 +13486,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1131374105 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1136761145}
 --- !u!4 &1133883855 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -14488,6 +14684,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_PrefabInternal: {fileID: 353889667}
+--- !u!1 &1288840573 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 355001280}
 --- !u!4 &1298415270 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -14538,6 +14738,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1299124119 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 186559274}
 --- !u!1001 &1306565895
 Prefab:
   m_ObjectHideFlags: 0
@@ -14588,6 +14792,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_PrefabInternal: {fileID: 602623351}
+--- !u!1 &1314938292 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1410942677}
 --- !u!1001 &1315518011
 Prefab:
   m_ObjectHideFlags: 0
@@ -15091,6 +15299,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8.11
@@ -15135,6 +15347,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 645023324}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_IsPrefabParent: 0
@@ -15944,6 +16160,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 446896, guid: 39721feeab0059544b620be50290d4af, type: 2}
   m_PrefabInternal: {fileID: 919222184}
+--- !u!1 &1442680464 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1352728512}
 --- !u!4 &1446257273 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -16356,6 +16576,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_PrefabInternal: {fileID: 303343206}
+--- !u!1 &1531413718 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 611120571}
 --- !u!4 &1535517295 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -16452,6 +16676,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1542194410 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 801543629}
 --- !u!4 &1542836159 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -17460,6 +17688,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39721feeab0059544b620be50290d4af, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1636393685 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 1143111386}
 --- !u!4 &1636906119 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -17565,6 +17797,14 @@ Prefab:
       propertyPath: enemySpawnerArray.Array.data[0]
       value: 
       objectReference: {fileID: 1667499650}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
   m_IsPrefabParent: 0
@@ -17913,6 +18153,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 46.19
@@ -17956,6 +18200,30 @@ Prefab:
     - target: {fileID: 105460, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 511961071}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1314938292}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 254680637}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 1542194410}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
@@ -18058,6 +18326,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 46.09
@@ -18097,6 +18369,30 @@ Prefab:
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.9714392
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 511961071}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1314938292}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 254680637}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 1542194410}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
@@ -19372,6 +19668,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 46.1199989
@@ -19411,6 +19711,26 @@ Prefab:
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.89010072
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1937660616}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 481024922}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 735344101}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
@@ -20429,6 +20749,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 57.99
@@ -20472,6 +20796,26 @@ Prefab:
     - target: {fileID: 105460, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1937660616}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 481024922}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 735344101}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
@@ -20707,6 +21051,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalPosition.x
       value: 49.3499985
@@ -20746,6 +21094,42 @@ Prefab:
     - target: {fileID: 475588, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.96736908
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: length
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 149242929}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 426965865}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 1131374105}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 1288840573}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[4]
+      value: 
+      objectReference: {fileID: 907970630}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[5]
+      value: 
+      objectReference: {fileID: 610790436}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnerArray.Array.data[6]
+      value: 
+      objectReference: {fileID: 1442680464}
+    - target: {fileID: 11478174, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
+      propertyPath: enemySpawnersExists
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad49ce3c556912148915cbf39e402e31, type: 2}
@@ -20896,6 +21280,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1937660616 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 151214, guid: 2ee694f060ef54445865abc90a02ca1a, type: 2}
+  m_PrefabInternal: {fileID: 180292402}
 --- !u!1001 &1937953286
 Prefab:
   m_ObjectHideFlags: 0

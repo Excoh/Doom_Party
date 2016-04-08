@@ -4,23 +4,23 @@ using System.Collections;
 public class Door : MonoBehaviour {
 
     public GameObject[] enemySpawnerArray;
-    public bool enemySpawnersExists;
-    public int length;
 
-	// Use this for initialization
-	void Start () 
+    // Update is called once per frame
+    void Update()
     {
-		enemySpawnersExists = false;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-		enemySpawnersExists = (GameObject.Find("Enemy Spawaner") != null);
+        bool enemySpawnersExists = false;
+        for (int i = 0; i < enemySpawnerArray.Length; i++)
+        {
+            GameObject enemySpawner = enemySpawnerArray[i];
+            if (enemySpawner != null)
+            {
+                enemySpawnersExists = true;
+            }
+        }
 
         if (!enemySpawnersExists)
         {
-			Destroy(this.gameObject);
-		}
+            Destroy(this.gameObject);
+        }
     }
 }
