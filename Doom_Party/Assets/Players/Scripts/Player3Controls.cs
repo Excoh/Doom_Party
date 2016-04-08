@@ -111,6 +111,27 @@ public class Player3Controls : MonoBehaviour {
 			}
 		}
 		*/
+        if (col.gameObject.tag == "Enemy")
+        {
+            P3Health = P3Health - 10;
+            MyGlobalController3.SharedInstance.P3Health = P3Health;
+            print(P3Health); // display the players numeric health amount
+            if (P3Health <= 0)
+            {
+                //Instantiate (PlayerDeath, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
+                Destroy(gameObject);
+            }
+
+        }
+
+        else if (col.gameObject.tag == "Health")
+        {
+            P3Health += 50;
+            MyGlobalController3.SharedInstance.P3Health = P3Health;
+            print(P3Health);
+            if (P3Health > 100) P3Health = 100;
+            Destroy(col.gameObject);
+        }
 	}
 
 

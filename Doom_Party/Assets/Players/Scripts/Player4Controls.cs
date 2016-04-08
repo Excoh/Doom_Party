@@ -110,6 +110,26 @@ public class Player4Controls : MonoBehaviour {
 			}
 		}
 		*/
+        if (col.gameObject.tag == "Enemy")
+        {
+            P4Health = P4Health - 10;
+            MyGlobalController4.SharedInstance.P4Health = P4Health;
+            print(P4Health); // display the players numeric health amount
+            if (P4Health <= 0)
+            {
+                //Instantiate (PlayerDeath, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
+                Destroy(gameObject);
+            }
+
+        }
+        else if (col.gameObject.tag == "Health")
+        {
+            P4Health += 50;
+            MyGlobalController4.SharedInstance.P4Health = P4Health;
+            print(P4Health);
+            if (P4Health > 100) P4Health = 100;
+            Destroy(col.gameObject);
+        }
 	}
 
 

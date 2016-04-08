@@ -174,10 +174,11 @@ public class Player1Controls : MonoBehaviour {
 
         if (col.gameObject.tag == "Health")
         {
-            P1Health += 10;
+            P1Health += 50;
             print(P1Health);
             MyGlobalController.SharedInstance.P1Health = P1Health;
             if (P1Health > 100) P1Health = 100;
+            Destroy(col.gameObject);
         }
 	
 	}
