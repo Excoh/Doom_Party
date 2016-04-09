@@ -3,6 +3,8 @@
 public class EnemyAI : MonoBehaviour
 {
 	public enum AIMode { ATTACK, IDLE }
+
+	public EnemySpawner parentSpawner;
 	
 	public static PlayerMovement[] s_Players = new PlayerMovement[4]; // Temporary solution until we figure out how players are represented.
 	
@@ -115,4 +117,15 @@ public class EnemyAI : MonoBehaviour
 			m_CurrentTarget = m_StartingPosition + Random.insideUnitCircle * m_WanderRadius;
 		}
 	}
+
+	public void damage(int damage)
+	{
+		m_HP -= damage;
+		if (m_HP <= 0)
+		{
+			if (parentSpawner)
+				parentSpawner.TakeDamage(1);
+			Destroy(gameObject);
+		}
+    }
 }

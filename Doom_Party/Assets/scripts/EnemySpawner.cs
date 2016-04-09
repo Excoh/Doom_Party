@@ -11,9 +11,9 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
 
-    public GameObject enemy;
+    public GameObject enemyPrefab;
     public float spawnTime = 3f;
-	public int health = 100;
+	public int health = 6;
     
 	/// <summary>
 	/// Use this for initialization
@@ -33,7 +33,8 @@ public class EnemySpawner : MonoBehaviour {
 	/// </summary>
     void Spawn ()
     {
-        Instantiate(enemy, transform.position, transform.rotation);
+        GameObject enemy = Instantiate(enemyPrefab, transform.position, transform.rotation) as GameObject;
+		enemy.GetComponent<EnemyAI>().parentSpawner = this;
     }
 
 	/// <summary>

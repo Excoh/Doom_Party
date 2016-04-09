@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21222466}
   - 114: {fileID: 11495502}
   - 58: {fileID: 5821854}
+  - 50: {fileID: 5032084}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -30,6 +31,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5032084
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194792}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 4
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &5821854
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -55,6 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7743b026e69b4dcca88cbf5fa955ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSpawner: {fileID: 0}
   m_Speed: 1
   m_TurningRadius: 0.7
   m_HP: 6
@@ -104,11 +123,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Mass
-      value: 0.0001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
@@ -145,6 +164,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_WanderTimer.m_MaxTime
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LinearDrag
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

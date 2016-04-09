@@ -13,6 +13,7 @@ public class PlayerControls : MonoBehaviour {
 	[SerializeField] private string FireButton;
 	[SerializeField] private float Speed = 0.05f;
 	[SerializeField] private int Health = 100;
+	[SerializeField] private float BulletSpeed = 0.5f;
 	// The [SerializeField] tag exposes a field in the inspector without making it public to other classes. -Alex
 	
 	private bool ReadyFire { get { return ShootingTimer.complete; } }
@@ -50,10 +51,9 @@ public class PlayerControls : MonoBehaviour {
 		
 		// Move The Player
 		if (Crouching == false && Sprinting == false)
-			transform.position = transform.position + new Vector3(1, 1, 0) * JoyY * Speed;
+			transform.position = transform.position + new Vector3(JoyX, JoyY, 0) * Speed;
 		else if (Sprinting == true)
-			transform.position = transform.position + new Vector3(1, 1, 0) * JoyY * Speed * 2.0f;
-			// You know you don't need brackets around a single statement, right? -Alex
+			transform.position = transform.position + new Vector3(JoyX, JoyY, 0) * Speed * 2.0f;
 		
 		
 		// Rotate the player
@@ -64,7 +64,14 @@ public class PlayerControls : MonoBehaviour {
 		if (ReadyFire) {
 			//if (Input.GetKey ("joystick 4 button 0")){
 			if (Input.GetAxis (FireButton) >= 0.5f){
-				Instantiate (BulletPrefab, new Vector3 (transform.position.x + 5000.5f, transform.position.y, 0), Quaternion.identity);
+				PlayerBullet bullet = Instantiate (BulletPrefab, new Vector3 (transform.position.x + 5000.5f, transform.position.y, 0), Quaternion.identity) as PlayerBullet;
+				float bulletAngle = Jangle;
+				if (Crouching == false)
+					if (Sprinting == true)
+						bulletAngle += Random.Range (-0.2f, 0.2f);
+					else
+						bulletAngle += Random.Range (-0.06f, 0.06f);
+				bullet.velocity = new Vector2(Mathf.Sin(bulletAngle), Mathf.Cos(bulletAngle)) * BulletSpeed;
 				Instantiate (GunSound, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
 				ShootingTimer.Reset();
 			}
