@@ -160,7 +160,7 @@ MonoBehaviour:
   m_WanderRadius: 4
   m_WanderTimer:
     m_MaxTime: 7
-  damageClip: {fileID: 8300000, guid: 2118f61a61b9bfc4eb2ac2f361899689, type: 3}
+  damageClip: {fileID: 8300000, guid: 94bed29b59173f74f8540d45a98e7ede, type: 3}
 --- !u!212 &21222466
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -274,7 +274,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: damageClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2118f61a61b9bfc4eb2ac2f361899689, type: 3}
+      objectReference: {fileID: 8300000, guid: 94bed29b59173f74f8540d45a98e7ede, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 194792}
