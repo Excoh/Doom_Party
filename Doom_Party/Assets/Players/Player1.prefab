@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11468232}
   - 50: {fileID: 5029618}
   - 58: {fileID: 5827158}
+  - 82: {fileID: 8249684}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player
@@ -52,6 +53,81 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!82 &8249684
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158538}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24362880, guid: 5b260dcf03708de4da2056db298eabaa,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11401220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,6 +169,12 @@ MonoBehaviour:
   GunSound: {fileID: 147912, guid: 1a77600d88e180c4dbc5874d5c236251, type: 2}
   P1Bullet: {fileID: 104438, guid: 438b72d181659394d99f11b1be14a93a, type: 2}
   player: {fileID: 0}
+  playerDamageClip: {fileID: 8300000, guid: 2118f61a61b9bfc4eb2ac2f361899689, type: 3}
+  playerPowerUpClip:
+  - {fileID: 8300000, guid: f5811453b1eb0db40a2391db76372fae, type: 3}
+  - {fileID: 8300000, guid: 0425617bef8750f4493e33cf9884c632, type: 3}
+  playerDeathClip: {fileID: 8300000, guid: 158433a5f18952346ae3f342316da05e, type: 3}
+  shootClip: {fileID: 8300000, guid: ac8e4d58dbe306c40a5de5c91d3fe08b, type: 3}
 --- !u!212 &21283008
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -143,7 +225,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 0.03999999}
+  m_AnchoredPosition: {x: -2.81, y: 25.53}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
@@ -153,6 +235,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: playerPowerUpClip.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 0
@@ -190,6 +276,22 @@ Prefab:
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2118f61a61b9bfc4eb2ac2f361899689, type: 3}
+    - target: {fileID: 0}
+      propertyPath: plaerDeathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 158433a5f18952346ae3f342316da05e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: playerDeathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 158433a5f18952346ae3f342316da05e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: shootClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ac8e4d58dbe306c40a5de5c91d3fe08b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158538}

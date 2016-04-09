@@ -6,8 +6,11 @@ public class Player4Controls : MonoBehaviour {
 	public GameObject GunSound;
 	public GameObject P4Bullet;
 	public Rigidbody2D player;
-
-	private bool ReadyFire;
+    public AudioClip playerDamageClip;
+    public AudioClip[] playerPowerUpClip;
+    public AudioClip playerDeathClip;
+    public AudioClip shootClip;
+    private bool ReadyFire;
 	private int Delay;
 	private float Jangle = 0; // Joystick Angle
 	private float JoyX = 0;   // Joystick X Axis
@@ -82,7 +85,9 @@ public class Player4Controls : MonoBehaviour {
 			if (Input.GetAxis ("RTrigger J4") >= 0.5f){
 				Instantiate (P4Bullet, new Vector3 (transform.position.x + 5000.5f, transform.position.y, 0), Quaternion.identity);
 				Instantiate (GunSound, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
-				Delay = 0;
+                GetComponent<AudioSource>().clip = shootClip;
+                GetComponent<AudioSource>().Play();
+                Delay = 0;
 				ReadyFire = false;
 			}
 
@@ -115,6 +120,8 @@ public class Player4Controls : MonoBehaviour {
             P4Health = P4Health - 10;
             MyGlobalController4.SharedInstance.P4Health = P4Health;
             print(P4Health); // display the players numeric health amount
+            GetComponent<AudioSource>().clip = playerDamageClip;
+            GetComponent<AudioSource>().Play();
             if (P4Health <= 0)
             {
                 //Instantiate (PlayerDeath, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
@@ -129,6 +136,8 @@ public class Player4Controls : MonoBehaviour {
             print(P4Health);
             if (P4Health > 100) P4Health = 100;
             Destroy(col.gameObject);
+            GetComponent<AudioSource>().clip = playerPowerUpClip[Random.Range(0, playerPowerUpClip.Length - 1)];
+            GetComponent<AudioSource>().Play();
         }
 	}
 
