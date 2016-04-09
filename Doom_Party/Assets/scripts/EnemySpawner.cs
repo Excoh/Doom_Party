@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour {
     public GameObject enemyPrefab;
     public float spawnTime = 3f;
 	public int health = 6;
-    
+    public AudioClip spawnClip;
 	/// <summary>
 	/// Use this for initialization
 	/// </summary>
@@ -35,6 +35,8 @@ public class EnemySpawner : MonoBehaviour {
     {
         GameObject enemy = Instantiate(enemyPrefab, transform.position, transform.rotation) as GameObject;
 		enemy.GetComponent<EnemyAI>().parentSpawner = this;
+        GetComponent<AudioSource>().clip = spawnClip;
+        GetComponent<AudioSource>().Play();
     }
 
 	/// <summary>
