@@ -18,17 +18,20 @@ public class EnemyAI : MonoBehaviour
 	[SerializeField] private float m_WanderRadius;
 	[SerializeField] private Timer m_WanderTimer;
 	
-	private AIMode m_AIMode = AIMode.IDLE;
+	
 	
 	public PlayerMovement[] players { get { return s_Players; } }
-	private float[] m_ThreatValues = null;
+    public Vector2 velocity { get { return new Vector2(m_Speed * Mathf.Cos(m_Direction), m_Speed * Mathf.Sin(m_Direction)); } }
+    public AudioClip damageClip;
+
+    private AIMode m_AIMode = AIMode.IDLE;
+    private float[] m_ThreatValues = null;
 	private bool[] m_IsInRange = null;
 	private Vector2 m_CurrentTarget;
 	private Vector2 m_StartingPosition;
-	
 	private float m_Direction; // Measured in radians.
 	
-	public Vector2 velocity { get { return new Vector2(m_Speed * Mathf.Cos(m_Direction), m_Speed * Mathf.Sin(m_Direction)); } }
+	
 	
 	public void OnEnable()
 	{
@@ -121,6 +124,8 @@ public class EnemyAI : MonoBehaviour
 	public void damage(int damage)
 	{
 		m_HP -= damage;
+        GetComponent<AudioSource>().clip = damageClip;
+        GetComponent<AudioSource>().Play();
 		if (m_HP <= 0)
 		{
 			if (parentSpawner)
