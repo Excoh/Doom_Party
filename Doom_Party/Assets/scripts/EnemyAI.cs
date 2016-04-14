@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     Vector3 input_movement;
     Vector3 input_rotation;
     Vector3 target_direction;
-    float movement_speed = 0.5f;
+    float movement_speed = 0.75f;
 
 	public Animator animationController;
 
