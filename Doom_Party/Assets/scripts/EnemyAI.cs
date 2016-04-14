@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour
     Vector3 target_direction;
     float movement_speed = 0.5f;
 
+	public Animator animationController;
+
     void Update()
     {
         //Code to run on update
@@ -34,6 +36,15 @@ public class EnemyAI : MonoBehaviour
         input_rotation = target_direction;
         //Here I actually set the AI state, but this line below will move the object that this script is on towards the player
         transform.position += target_direction * movement_speed * Time.deltaTime;
+
+		if (target_direction.y <= 0)
+		{
+			animationController.SetBool("FacingForwards", true);
+		}
+		else
+		{
+			animationController.SetBool("FacingForwards", false);
+		}
     }
 
     private GameObject Get_Closest_Player(Vector3 enemy_location)
