@@ -6,122 +6,54 @@ public class EnemyAI : MonoBehaviour
 
 	public EnemySpawner parentSpawner;
 	
-	public static PlayerMovement[] s_Players = new PlayerMovement[4]; // Temporary solution until we figure out how players are represented.
-	
-	[SerializeField] private float m_Speed;
-	[SerializeField] private float m_TurningRadius;
 	[SerializeField] private int m_HP = 6; // Might want to move to a separate component?
-	[SerializeField] private float m_Range;
-	[SerializeField] private float m_CloseRange;
-	[SerializeField] private float m_AimingLeewayRadians = 0.1f;
-	[SerializeField] private float m_TargetReachingLeeway;
-	[SerializeField] private float m_WanderRadius;
-	[SerializeField] private Timer m_WanderTimer;
 	
-	
-	
-	public PlayerMovement[] players { get { return s_Players; } }
-    public Vector2 velocity { get { return new Vector2(m_Speed * Mathf.Cos(m_Direction), m_Speed * Mathf.Sin(m_Direction)); } }
     public AudioClip damageClip;
+    Vector3 input_movement;
+    Vector3 input_rotation;
+    Vector3 target_direction;
+    float movement_speed = 0.5f;
 
-    private AIMode m_AIMode = AIMode.IDLE;
-    private float[] m_ThreatValues = null;
-	private bool[] m_IsInRange = null;
-	private Vector2 m_CurrentTarget;
-	private Vector2 m_StartingPosition;
-	private float m_Direction; // Measured in radians.
-	
-	
-	
-	public void OnEnable()
-	{
-		m_StartingPosition = transform.position;
-		m_ThreatValues = new float[players.Length];
-		m_IsInRange = new bool[players.Length];
-		m_WanderTimer.Reset();
-		m_WanderTimer.End();
-	}
-	
-	public void Update()
-	{
-		TrackThreats();
-		HandleMovement();
-	}
-	
-	private void TrackThreats()
-	{
-		// Increase or reset the threat values of individual players.
-		for (int i = 0; i < players.Length; i++)
-			if (players[i] != null)
-			{
-				float distanceToPlayer = Vector2.Distance(transform.position, players[i].transform.position);
-				if (m_AIMode == AIMode.IDLE && distanceToPlayer <= m_Range)
-					m_ThreatValues[i] += 10.0f;
-				if (!m_IsInRange[i] && distanceToPlayer <= m_Range)
-				{
-					m_IsInRange[i] = true;
-					m_ThreatValues[i] += 10.0f;
-				}
-				if (distanceToPlayer <= m_CloseRange)
-					m_ThreatValues[i] += 10.0f * Time.deltaTime;
-				if (m_IsInRange[i] && distanceToPlayer > m_Range)
-				{
-					m_IsInRange[i] = false;
-					m_ThreatValues[i] = 0.0f;
-				}
-				// if players[i] is dead
-				// m_ThreatValues[i] = 0;
-			}
-		
-		// Determine if this enemy should be idle, and which player (if any) is its current target.
-		float maxThreat = 0.0f;
-		m_AIMode = AIMode.IDLE;
-		for (int i = 0; i < players.Length; i++)
-		{
-			if (m_ThreatValues[i] > 0.0f)
-				m_AIMode = AIMode.ATTACK;
-			
-			if (m_ThreatValues[i] > maxThreat)
-			{
-				m_CurrentTarget = players[i].transform.position;
-				maxThreat = m_ThreatValues[i];
-			}
-		}
-		if (m_AIMode == AIMode.IDLE)
-			Wander();
-	}
-	
-	private void HandleMovement()
-	{
-		// Turn towards the target.
-		Vector2 vectorToTarget = m_CurrentTarget - (Vector2)transform.position;
-		float angleToTarget = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x);
-		float deltaAngleToTarget = angleToTarget - m_Direction;
-		if (deltaAngleToTarget < 0.0f){ deltaAngleToTarget += 2.0f * Mathf.PI;}
-		///
-		// If delta < pi, turn clockwise. If delta > pi, turn counterclockwise.
-		if (deltaAngleToTarget > m_AimingLeewayRadians && deltaAngleToTarget < Mathf.PI)
-			m_Direction += m_Speed / m_TurningRadius * Time.deltaTime;
-		else if (deltaAngleToTarget >= Mathf.PI && deltaAngleToTarget < (2.0f*Mathf.PI) - m_AimingLeewayRadians)
-			m_Direction -= m_Speed / m_TurningRadius * Time.deltaTime;
-		
-		float distanceToTarget = Vector2.Distance(m_CurrentTarget, transform.position);
-		if (distanceToTarget > m_TargetReachingLeeway)
-		{
-			transform.position = (Vector2)transform.position + velocity * Time.deltaTime;
-		}
-	}
-	
-	private void Wander()
-	{
-		if (m_WanderTimer.complete)
-		{
-			m_WanderTimer.Reset();
-			m_CurrentTarget = m_StartingPosition + Random.insideUnitCircle * m_WanderRadius;
-		}
-	}
+    void Update()
+    {
+        //Code to run on update
+        GameObject target = Get_Closest_Player(transform.position);
+        float target_distance;
+        if (target == null)
+        {
+            input_movement = Vector3.zero;
+            input_rotation = transform.forward * -1;
+            return;
+        }
+        //Targets distance allows me to do some different movement based on how close the enemy is to the player
+        //such as move away if they get too close
+        target_distance = Vector3.Distance(transform.position, target.transform.position);
+        //Find the direction to the target based on the targets position to mine
+        target_direction = target.transform.position - transform.position;
+        //Inherited variable for firing direction, used for the projectile script
+        input_rotation = target_direction;
+        //Here I actually set the AI state, but this line below will move the object that this script is on towards the player
+        transform.position += target_direction * movement_speed * Time.deltaTime;
+    }
 
-	public void damage(int damage)
+    private GameObject Get_Closest_Player(Vector3 enemy_location)
+    {
+        GameObject closest_player = null;
+        float closest_player_distance = Mathf.Infinity;
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            float temp_distance = Vector3.Distance(enemy_location, player.transform.position);
+            if (temp_distance < closest_player_distance)
+            {
+                closest_player = player;
+                closest_player_distance = temp_distance;
+            }
+        }
+        return closest_player;
+    }
+
+    public void damage(int damage)
 	{
 		m_HP -= damage;
         GetComponent<AudioSource>().clip = damageClip;
