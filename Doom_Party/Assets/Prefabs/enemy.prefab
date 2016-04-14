@@ -13,6 +13,7 @@ GameObject:
   - 58: {fileID: 5821854}
   - 50: {fileID: 5032084}
   - 82: {fileID: 8293492}
+  - 95: {fileID: 9580902}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1812398, y: -1.532167, z: 0}
+  m_LocalPosition: {x: 3.18123984, y: -1.53216696, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,10 +40,9 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194792}
-  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 4
-  m_AngularDrag: 0.05
+  m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -56,13 +56,12 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194792}
   m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.13077378
+  m_Radius: .130773783
 --- !u!82 &8293492
 AudioSource:
   m_ObjectHideFlags: 1
@@ -104,7 +103,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -115,7 +113,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -126,7 +123,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -137,7 +133,23 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+--- !u!95 &9580902
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e88363da89c168d45af8ee7865d17c99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11495502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,17 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentSpawner: {fileID: 0}
-  m_Speed: 1
-  m_TurningRadius: 0.7
   m_HP: 6
-  m_Range: 10
-  m_CloseRange: 1
-  m_AimingLeewayRadians: 0.1
-  m_TargetReachingLeeway: 0.1
-  m_WanderRadius: 4
-  m_WanderTimer:
-    m_MaxTime: 7
   damageClip: {fileID: 8300000, guid: 94bed29b59173f74f8540d45a98e7ede, type: 3}
+  animationController: {fileID: 9580902}
 --- !u!212 &21222466
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -179,18 +183,14 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: ac5530e6c91480542844b6c3b1cb4ed6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13b8ff68a2cbac14fb9c746939bbbc3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -275,6 +275,23 @@ Prefab:
       propertyPath: damageClip
       value: 
       objectReference: {fileID: 8300000, guid: 94bed29b59173f74f8540d45a98e7ede, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 13b8ff68a2cbac14fb9c746939bbbc3e,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e88363da89c168d45af8ee7865d17c99, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: animationController
+      value: 
+      objectReference: {fileID: 9580902}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 194792}
