@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
         //such as move away if they get too close
         target_distance = Vector3.Distance(transform.position, target.transform.position);
         //Find the direction to the target based on the targets position to mine
-        target_direction = target.transform.position - transform.position;
+        target_direction = (target.transform.position - transform.position).normalized;
         //Inherited variable for firing direction, used for the projectile script
         input_rotation = target_direction;
         //Here I actually set the AI state, but this line below will move the object that this script is on towards the player

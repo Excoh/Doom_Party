@@ -61,7 +61,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: .130773783
+  m_Radius: .25
 --- !u!82 &8293492
 AudioSource:
   m_ObjectHideFlags: 1
@@ -311,6 +311,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Volume
       value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
