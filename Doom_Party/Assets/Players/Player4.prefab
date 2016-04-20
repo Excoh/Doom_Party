@@ -15,6 +15,7 @@ GameObject:
   - 58: {fileID: 5842394}
   - 114: {fileID: 11446954}
   - 82: {fileID: 8264868}
+  - 114: {fileID: 11460456}
   m_Layer: 8
   m_Name: Player4
   m_TagString: Player
@@ -142,6 +143,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0425617bef8750f4493e33cf9884c632, type: 3}
   playerDeathClip: {fileID: 8300000, guid: 158433a5f18952346ae3f342316da05e, type: 3}
   shootClip: {fileID: 8300000, guid: ac8e4d58dbe306c40a5de5c91d3fe08b, type: 3}
+--- !u!114 &11460456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5992ab4cdfc72c74bad03dfe24fc4610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingScore: 0
+  playerName: P4
+  playerScoreTextObjectName: P4ScoreText
 --- !u!114 &11475026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .525490224, g: .517647088, b: .262745112, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

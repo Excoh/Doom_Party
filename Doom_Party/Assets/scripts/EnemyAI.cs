@@ -5,16 +5,24 @@ public class EnemyAI : MonoBehaviour
 	public enum AIMode { ATTACK, IDLE }
 
 	public EnemySpawner parentSpawner;
-	
-	[SerializeField] private int m_HP = 6; // Might want to move to a separate component?
+
+	public int startingHP = 6;
+	private int currentHP;
 	
     public AudioClip damageClip;
     Vector3 input_movement;
     Vector3 input_rotation;
     Vector3 target_direction;
-    float movement_speed = 0.75f;
+    public float movement_speed = 0.75f;
+
+	public int scoreToGive = 1;
 
 	public Animator animationController;
+
+	private void Start()
+	{
+		currentHP = startingHP;
+    }
 
     void Update()
     {
@@ -64,15 +72,19 @@ public class EnemyAI : MonoBehaviour
         return closest_player;
     }
 
-    public void damage(int damage)
+    public void damage(int damage, int playerNum)
 	{
-		m_HP -= damage;
+		currentHP -= damage;
         GetComponent<AudioSource>().clip = damageClip;
         GetComponent<AudioSource>().Play();
-		if (m_HP <= 0)
+		if (currentHP <= 0)
 		{
 			if (parentSpawner)
 				parentSpawner.TakeDamage(1);
+
+			string playerName = "Player" + playerNum;
+			GameObject.Find(playerName).GetComponent<ScoreHandler>().AddScore(scoreToGive);
+
 			Destroy(gameObject);
 		}
     }
