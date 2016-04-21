@@ -184,6 +184,7 @@ public class Player1Controls : MonoBehaviour
             if (P1Health <= 0)
             {
                 //Instantiate (PlayerDeath, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
+                HealthManager.player1dead = true;
                 Destroy(gameObject);
             }
 

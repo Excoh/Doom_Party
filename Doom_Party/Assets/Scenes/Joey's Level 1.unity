@@ -183,15 +183,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -3.72839785
+      value: -3.7283978
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 23.3908386
+      value: 23.390839
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_SizeDelta.x
@@ -203,27 +203,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_AnchorMin.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_AnchorMin.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_AnchorMax.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_Pivot.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449068, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: m_Pivot.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8264868, guid: 109d24c7af3017f45bc33fe2b38a6d96, type: 2}
       propertyPath: panLevelCustomCurve.m_RotationOrder
@@ -926,15 +926,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -6.4813652
+      value: -6.481365
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 23.7579041
+      value: 23.757904
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_SizeDelta.x
@@ -946,27 +946,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_AnchorMin.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_AnchorMin.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_AnchorMax.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_Pivot.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22449470, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: m_Pivot.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8263850, guid: c8bd34332ff7b5f439c992b38755e0cb, type: 2}
       propertyPath: panLevelCustomCurve.m_RotationOrder
@@ -1150,7 +1150,6 @@ GameObject:
   - 124: {fileID: 97381036}
   - 81: {fileID: 97381035}
   - 114: {fileID: 97381039}
-  - 114: {fileID: 97381040}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1236,17 +1235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212d1a4ee9090c34f91baf2f02b3603e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &97381040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 97381033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c87de034b84edf47be46e2ff18e2216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &101330371 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -1328,7 +1316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
 --- !u!4 &106446026 stripped
 Transform:
   m_PrefabParentObject: {fileID: 436410, guid: 28303b0db9a937a48b99f307696d1bb0, type: 2}
@@ -11133,7 +11121,7 @@ RectTransform:
   m_Children:
   - {fileID: 520367089}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -14613,15 +14601,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -4.21781254
+      value: -4.2178125
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 25.1037941
+      value: 25.103794
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_SizeDelta.x
@@ -14633,27 +14621,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_AnchorMin.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_AnchorMin.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_AnchorMax.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_Pivot.x
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22477142, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: m_Pivot.y
-      value: .5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8225828, guid: 4dca371ad26541548b4070117b81d8f0, type: 2}
       propertyPath: panLevelCustomCurve.m_RotationOrder
@@ -14860,14 +14848,6 @@ Prefab:
     - target: {fileID: 22462140, guid: d40a1556edc72fd449082426cb2eb83f, type: 2}
       propertyPath: m_Pivot.y
       value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8249684, guid: d40a1556edc72fd449082426cb2eb83f, type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8249684, guid: d40a1556edc72fd449082426cb2eb83f, type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d40a1556edc72fd449082426cb2eb83f, type: 2}
@@ -17233,7 +17213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1001 &1496383186
 Prefab:
   m_ObjectHideFlags: 0
