@@ -126,6 +126,7 @@ public class Player3Controls : MonoBehaviour {
             if (P3Health <= 0)
             {
                 //Instantiate (PlayerDeath, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity);
+                HealthManager.player3dead = true;
                 Destroy(gameObject);
             }
 
